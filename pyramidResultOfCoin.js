@@ -35,10 +35,10 @@ MinimumCoinChange.prototype = {
     */
     displayResults: function(amount){
         var results = this.generateCoins(amount);
-        //console.log(results);
+        
         document.write('There is :');
         for(var i = 0; i < results.length; i++) {
-            //console.log('There are(is) ', results[i], ' ', coinnames[i]);
+          
            document.write(results[i], ' ', coinnames[i] + ',  ');
         }
     }
@@ -47,7 +47,7 @@ MinimumCoinChange.prototype = {
 var cointypes = [25, 10, 5, 1],
     coinnames = ["25Kobo", "10Kobo", "5Kobo", "1Kobo"],
     coinChanger = new MinimumCoinChange(cointypes);
-coinChanger.displayResults(36);
+coinChanger.displayResults(121);
 
 </script>
 
