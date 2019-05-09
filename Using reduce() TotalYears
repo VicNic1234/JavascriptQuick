@@ -25,6 +25,8 @@ years: 22,
 
 var TotalYears = pilots.reduce (function (ageSum, pilot) { return ageSum + pilot.years; }, 0);
 
+console.log('The Total Years :' + TotalYears);
+
 
 
 
