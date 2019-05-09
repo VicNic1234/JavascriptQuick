@@ -23,4 +23,6 @@ var pilots = [
 ];
 
 const TheRebels = pilots.filter (function (pilot) { return pilot.faction === "Rebels";  });
+console.log('The Rables :' + TheRebels);
 const TheEmpires = pilots.filter (pilot => pilot.faction === "Empire");
+console.log('The Empires :' + TheEmpires);
