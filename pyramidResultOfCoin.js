@@ -44,9 +44,9 @@ MinimumCoinChange.prototype = {
            for (var j = 1; j <= results[i]; j++) {
 
           
-            document.write(cointypes[i] + " ");
+            console.log(cointypes[i] + " ");
          }
-           document.write("\n"+"<br/>");
+           //document.write("\n"+"<br/>");
            ///////////////////////////////
         } 
     }
@@ -60,7 +60,7 @@ var coinChanger = new MinimumCoinChange(cointypes.sort());
     
 coinChanger.displayResults(121);
 
-document.write(FinalResult);
+console.log(FinalResult);
 
 
 </script>
