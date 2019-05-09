@@ -39,23 +39,25 @@ MinimumCoinChange.prototype = {
         FinalResult = 'There is : ';
         for(var i = 0; i < results.length; i++) {
           
-           FinalResult +=  results[i] + ' ' + coinnames[i] + ',  ';
+           FinalResult +=  results[i] + ' ' + cointypes[i] + ' Kobo,  ';
            ////////////////////////////////
            for (var j = 1; j <= results[i]; j++) {
 
           
-            document.write(coinnames[i] + " ");
+            document.write(cointypes[i] + " ");
          }
            document.write("\n"+"<br/>");
            ///////////////////////////////
-        }
+        } 
     }
 };
 
 
-var cointypes = [25, 10, 5, 1],
-    coinnames = ["25Kobo", "10Kobo", "5Kobo", "1Kobo"],
-    coinChanger = new MinimumCoinChange(cointypes);
+var cointypes = [25, 10, 5, 1];
+   // coinnames = ["25Kobo", "10Kobo", "5Kobo", "1Kobo"];
+    
+var coinChanger = new MinimumCoinChange(cointypes.sort());
+    
 coinChanger.displayResults(121);
 
 document.write(FinalResult);
