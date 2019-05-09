@@ -56,7 +56,7 @@ MinimumCoinChange.prototype = {
 var cointypes = [25, 10, 5, 1];
    // coinnames = ["25Kobo", "10Kobo", "5Kobo", "1Kobo"];
     
-var coinChanger = new MinimumCoinChange(cointypes.sort());
+var coinChanger = new MinimumCoinChange(cointypes); //.sort()
     
 coinChanger.displayResults(121);
 
