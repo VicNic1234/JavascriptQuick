@@ -1,11 +1,10 @@
 <script>
-
 function MinimumCoinChange(cointypes) {
     //save the coin types in coins
     this.coins = cointypes;
     this.numCoinTypes = this.coins.length;
 }
-
+var FinalResult;
 MinimumCoinChange.prototype = {
     /*
     pass cent amount to this function
@@ -33,21 +32,33 @@ MinimumCoinChange.prototype = {
     /*
     display the types of coins generated
     */
+    
     displayResults: function(amount){
         var results = this.generateCoins(amount);
         
-        document.write('There is :');
+        FinalResult = 'There is : ';
         for(var i = 0; i < results.length; i++) {
           
-           document.write(results[i], ' ', coinnames[i] + ',  ');
+           FinalResult +=  results[i] + ' ' + coinnames[i] + ',  ';
+           ////////////////////////////////
+           for (var j = 1; j <= results[i]; j++) {
+
+          
+            document.write(coinnames[i] + " ");
+         }
+           document.write("\n"+"<br/>");
+           ///////////////////////////////
         }
     }
 };
+
 
 var cointypes = [25, 10, 5, 1],
     coinnames = ["25Kobo", "10Kobo", "5Kobo", "1Kobo"],
     coinChanger = new MinimumCoinChange(cointypes);
 coinChanger.displayResults(121);
 
-</script>
+document.write(FinalResult);
 
+
+</script>
