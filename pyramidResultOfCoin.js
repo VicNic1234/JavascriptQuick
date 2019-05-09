@@ -37,15 +37,22 @@ MinimumCoinChange.prototype = {
         var results = this.generateCoins(amount);
         
         FinalResult = 'There is : ';
-        for(var i = 0; i < results.length; i++) {
+        //for(var i = 0; i < results.length; i++) {
+        for(var i = results.length -1; i > -1; i--) {
           
            FinalResult +=  results[i] + ' ' + cointypes[i] + ' Kobo,  ';
            ////////////////////////////////
-           for (var j = 1; j <= results[i]; j++) {
+          // for (var j = results[i]; j <= results[i]; j++) {
 
-          
-            console.log(cointypes[i] + " ");
-         }
+          	
+            //console.log(cointypes[i] + " ");
+             var str = "";
+            for (var k = 1; k <= results[i]; k++) {
+            str +=  cointypes[i] +"," ;
+               }
+           console.log(str);
+            
+         //}
            //document.write("\n"+"<br/>");
            ///////////////////////////////
         } 
@@ -60,7 +67,8 @@ var coinChanger = new MinimumCoinChange(cointypes); //.sort()
     
 coinChanger.displayResults(121);
 
-//console.log(FinalResult);
+ 
+  
 
 
 </script>
