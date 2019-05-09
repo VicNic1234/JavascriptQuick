@@ -1,7 +1,12 @@
 <script>
+function numberDes(a,b) {
+   return b-a;
+ }
+
+ 
 function MinimumCoinChange(cointypes) {
     //save the coin types in coins
-    this.coins = cointypes;
+    this.coins = cointypes.sort(numberDes);//cointypes;
     this.numCoinTypes = this.coins.length;
 }
 var FinalResult;
