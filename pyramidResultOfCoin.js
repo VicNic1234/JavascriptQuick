@@ -60,7 +60,7 @@ var coinChanger = new MinimumCoinChange(cointypes); //.sort()
     
 coinChanger.displayResults(121);
 
-console.log(FinalResult);
+//console.log(FinalResult);
 
 
 </script>
