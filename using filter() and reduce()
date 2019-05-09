@@ -41,3 +41,5 @@ var personnel = [
 
 const ForceUsers = personnel.filter(user => user.isForceUser === "true");
 var TotalScoreForceUser = ForceUsers.reduce(function (FSSum, pilotScore) { return FSSum + pilotScore.pilotingScore; }, 0);
+
+console.log('Total Score isForceUser : ' + TotalScoreForceUser);
