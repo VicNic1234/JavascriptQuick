@@ -50,6 +50,7 @@ MinimumCoinChange.prototype = {
             for (var k = 1; k <= results[i]; k++) {
             str +=  cointypes[i] +"," ;
                }
+            if(str != "")
            console.log(str);
             
          //}
